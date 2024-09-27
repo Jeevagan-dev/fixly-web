@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Video and Image Slider</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="./files/video1.mp4" as="video">
+  <link rel="preload" href="./files/video2.mp4" as="video">
+  <link rel="preload" href="./files/video3.mp4" as="video">
+
+</head>
+<body>
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+      </div>
+  <div class="hero">
+    <nav>
+        <h1>FIXLY</h1>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <!-- Video for desktop and tablet -->
+    <video id="backgroundVideo" src="./files/video2.mp4" autoplay muted loop></video>
+
+    <!-- Image for mobile -->
+    <img id="backgroundImage" src="./files/2.jpg" alt="Background Image">
+
+    <div class="content" id="dynamicContent">
+        <h1><span>Fixly</span> fosters flawless fixes for curious creators!</h1>
+        <p id="dynamicText">Where Vision Meets Technology..</p>
+      </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
