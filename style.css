@@ -6,7 +6,9 @@
     font-family: "Space Grotesk", sans-serif;
 
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 .home-container{
     position: relative;
     width: 100%;
@@ -59,6 +61,19 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     }
     .about-content{
         padding: 15px;
+    }
+
+    .services .card{
+        padding: 0 !important;
+    }
+    .card  p{
+        margin: 10px !important;
+    }
+    .svg{
+        width: 50px;
+    }
+    .card h1 {
+        margin: 0 !important;
     }
 }
 
@@ -285,7 +300,9 @@ transition: all 1s;
   @media (min-width: 768px) {
     .services {
       grid-template-columns: repeat(2, 1fr); 
+      
     }
+  
   }
   
   @media (min-width: 1024px) {
@@ -321,3 +338,83 @@ transition: all 1s;
     color: #666;
   }
   
+
+
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: greenyellow;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  .marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll 12s linear infinite;
+    align-items: center;
+  }
+  
+  .marquee-content span {
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .marquee-content svg {
+    margin-right: 10px; /* Space between icon and text */
+    width: 24px;
+    height: 24px;
+    stroke: #555; /* Default stroke color */
+    transition: stroke 0.3s ease; /* Smooth color change on hover */
+  }
+  
+  /* Hover effects */
+  .marquee-content span:hover svg {
+    stroke: #ff5722; /* Icon color on hover */
+  }
+  
+  .marquee-container:hover .marquee-content {
+    animation-play-state: paused; /* Pause scrolling on hover */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .marquee-content span {
+      font-size: 1.2rem;
+      padding: 0 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .marquee-content span {
+      font-size: 1rem;
+      padding: 0 30px;
+    }
+  }
+  
+  
+  .marquee-container svg{
+    color: #333;
+    stroke-width: 3px;
+    text-align: center;
+  }
+  .marquee-container span {
+    text-align: center;
+  }
+  marquee{
+    text-align: center;
+  }
