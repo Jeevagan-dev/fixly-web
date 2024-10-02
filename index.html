@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fixly offers innovative IT solutions, digital transformation, web development, and mobile app development to help businesses grow.">
+    <meta name="keywords" content="IT Solutions, Digital Transformation, Web Development, Mobile App Development, UI/UX Design, Cloud Technology, Artificial Intelligence Solutions, Software Development, IT Consultancy Services, Outsourcing Services">
+    <meta property="og:title" content="Fixly - Innovative IT Solutions">
+    <meta property="og:description" content="Discover IT solutions and services to transform your business.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Fixly</title>
-
+    <title>Fixly - Innovative IT Solutions</title>
 </head>
 <body>
     <div class="home-container">
@@ -26,10 +29,10 @@
                     <a href="#Services">
                         <li>Services</li>
                     </a>
-                    <a href="">
-                        <li>Team</li>
+                    <a href="#industry">
+                        <li>Industries</li>
                     </a>
-                    <a href="">
+                    <a href="#contact">
                         <li>Contact us</li>
                     </a>
                 </ul>
@@ -41,30 +44,87 @@
             </nav>
         </div>
         <video autoplay loop muted>
-            <source src="./assets/background.mp4" type="video/mp4">
+            <source src="./assets/background.mp4" type="video/mp4" >
         </video>
         <div class="content">
-            <h1>
+            <h1 id="dynamic">
                 <span>Fixly</span> finds fast fixes for tricky tasks!
             </h1>
             <p> Innovating Tomorrow, Today</p>
-            <!-- <a href=""><button class="btn">contact us </button></a> -->
         </div>
     </div>
 
 
     <section class="about-section" id="About">
         <h1 class="title">About Us</h1>
-       <div class="about-container">
-        <img src="./assets/about-fixly.jpg" alt="fixly about us image" >
-           <div class="about-content">
-          <h1>what we do !</h1>
-          <p>At your FIXLY, we believe in building long-lasting partnerships with our clients. Whether you’re a startup looking for scalable IT solutions or an enterprise needing robust infrastructure support, we are your trusted technology partner, helping you turn digital transformation into a competitive advantage. Feel free to customize it further to reflect your company's specific values, services, and goals!</p>
-                      <a href=""><button class="btn">contact us ➔ </button></a>
+       
+       <div class="container-fixly">
+        <h1>what we do !</h1>
+        <p class="lite">At FIXLY, we believe in building long-lasting partnerships with our clients. Whether you’re a startup looking for scalable IT solutions or an enterprise needing robust infrastructure support, we are your trusted technology partner, helping you turn digital transformation into a competitive advantage.</p>
 
-           </div>
        </div>
+       <div class="updated-abt">
+        <div class="card-upda">
+          <div class="card-image-upda commitments-img-upda"></div>
+          <div class="card-text-upda">
+              <h2>Our Commitment</h2>
+              <ul>
+                  <li>Quality and Timely Delivery</li>
+                  <li>Transparency</li>
+                  <li>Tailored Solutions<span class="dots-upda"></span></li>
+                  <div class="more-upda">
+                      <li>Security and Compliance</li>
+                      <li>Ongoing Support and Maintenance</li>
+                      <li>Innovation and Future-proofing</li>
+                      <li>Integrity and Trust</li>
+                  </div>
+              </ul>
+          </div>
+      </div>
+        <div class="card-upda">
+          <div class="card-image-upda advisory-img-upda"></div>
+          <div class="card-text-upda">
+              <h2>Our Team</h2>
+              <p>Our team comprises a distinguished collective of professionals with deep-rooted expertise across a wide spectrum of industries, including technology, finance, and beyond. 
+                  <span class="dots-upda"></span>
+              </p>
+              <div class="more-upda">
+                <p> With a relentless drive for innovation and an unwavering commitment to excellence, we craft bespoke solutions tailored to the distinct challenges of each client. Leveraging our diverse skill sets and profound industry knowledge, we empower businesses to thrive and stay competitive in an ever-evolving landscape.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+       </div>
+     
+<div class=" btn-model">
+  <button id="openModal">Board</button>
+</div>
+
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Our board members</h2>  <br>
+      <div class="image-container">
+          <div class="image-box">
+              <img src="./assets/fixly1.jpg" alt="Image 1">
+              <h4>Shiv Govind</h4>
+            <p>Director</p>
+          </div>
+          <div class="image-box">
+              <img src="./assets/fixly12.jpeg" alt="Image 2">
+              <h4>Nizamudhin</h4>
+            <p>Director</p>
+          </div>
+      </div>
+  </div>
+</div>
+
     </section>
+
+
+   
+
     <section class="services-section" id="Services">
         <h1 class="title">Services at Fixly</h1>
          <div class="services">
@@ -206,7 +266,7 @@
          </div>
     </section>
 
-    <div class="marquee-container">
+    <div class="marquee-container" id="industry">
         <div class="marquee-content">
             <span>Industries : </span>
           <span>
@@ -231,14 +291,14 @@
               <line x1="10" y1="3" x2="14" y2="3"></line>
               <line x1="8" y1="11" x2="16" y2="11"></line>
             </svg>
-            Chemical Company
+            Chemical Industries
           </span>
           <span>
             <!-- Cosmetic Company Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-droplet">
               <path d="M12 2.7C12 2.7 6 7.6 6 12.2a6 6 0 1 0 12 0c0-4.6-6-9.5-6-9.5z"></path>
             </svg>
-            Cosmetic Company
+            Cosmetic Industries
           </span>
           <span>
             <!-- Law Firms Icon -->
@@ -276,8 +336,61 @@
           </span>
         </div>
       </div>
+      <div id="contact" class="contact-us-container">
+       
       
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="mobile">Mobile no</label>
+                <input type="number" id="mobile" name="mobile" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+              <div id="formMessage" style="display:none; margin-top: 20px;"></div>
+            </form>
+          </div>
+            <!-- Success/Error Message -->
+            <div class="contact-details">
+                <h2>Contact Us</h2>
+                <p>FIXLY INNOVATION PRIVATE LIMITED</p>
+                <p>2F periyasamy Pillai street ,</p>
+                <p>Tindivanam, Villupuram,</p>
+                <p> Pincode 604001</p>   
+                
+                <p>Email: support@fixlyinnov.com</p>
+                <p>Phone: +91 7200388039, +91 70046 22838</p>
+                
+                <div class="social-media">
+                  <h3>Follow Us</h3>
+                  <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            
+          </div>
+          
       
+          <footer class="footer">
+            <p>&copy; 2024  FIXLY INNOVATION PRIVATE LIMITED. All rights reserved.</p>
+          </footer>
+      
+     
+      <script src="index.js"></script>
     <script>
         var menu = document.getElementsByClassName('menubar')[0];
         var menuitems = document.getElementsByTagName('ul')[0];
@@ -286,5 +399,6 @@
             menuitems.classList.toggle('menushow')
         })
     </script>
+     
 </body>
 </html>
