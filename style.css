@@ -31,6 +31,7 @@ html {
 }
 
 @media only screen and (max-width: 768px){
+   
     .items li{
         font-size: 20px;
         display: block;
@@ -42,7 +43,7 @@ html {
     .items{
         display: none;
         position: absolute;
-        top:100px;
+        top:150px;
         width: 100%;
         left: 0;
         padding: 20px;
@@ -166,7 +167,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 .about-section{
     text-align: center;
     width: 100%;
-    min-height: 100vh;
+    height: auto;
     background-color: black;
     color: white;
 }
@@ -346,13 +347,13 @@ transition: all 1s;
     background: greenyellow;
     padding: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    
   }
   
   .marquee-content {
     display: flex;
     white-space: nowrap;
-    animation: scroll 12s linear infinite;
+    animation: scroll 15s linear infinite;
     align-items: center;
   }
   
@@ -383,7 +384,7 @@ transition: all 1s;
     animation-play-state: paused; /* Pause scrolling on hover */
   }
   
-  @keyframes scroll {
+   @keyframes scroll {
     0% {
       transform: translateX(100%);
     }
@@ -397,14 +398,34 @@ transition: all 1s;
       font-size: 1.2rem;
       padding: 0 40px;
     }
-  }
+  } 
   
   @media (max-width: 480px) {
+    
+  .marquee-content {
+    animation-duration: 15s;
+  }
+  .marquee-content {
+    transform: translateX(100%); 
+  }
     .marquee-content span {
       font-size: 1rem;
       padding: 0 30px;
     }
-  }
+    
+
+    @keyframes scroll {
+        0% {
+          transform: translateX(100%);
+        }
+        
+        100% {
+          transform: translateX(-300%);
+        }
+
+
+
+  }}
   
   
   .marquee-container svg{
@@ -418,3 +439,542 @@ transition: all 1s;
   marquee{
     text-align: center;
   }
+
+
+
+
+
+  /* updating about section */
+
+
+  .placeholder{
+    width: 200px;
+    height: 200px;
+    background-color: #666;
+    opacity: 0.5;
+  }
+
+ .commitment{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ .advisory-team{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+  #more {display: none;}
+  #moredata{display: none;}
+
+
+
+
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.btn-group {
+    margin-bottom: 20px;
+}
+
+.btn-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: yellowgreen;
+    border: none;
+    color: black;
+    border-radius: 5px;
+}
+
+.btn-group button.active {
+    background-color: yellowgreen;
+    opacity: 0.6;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.btn-model{
+    display: flex;
+  
+    max-width: auto;
+}
+
+
+.card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
+}
+.team-sec{
+    background-color: #ffffff;
+    color: black;
+}
+.advisor img{
+    background-color: #26ff00;
+    width: 300px;
+    height: 300px;
+}
+
+
+.card h4 {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.advisor{
+    background-color: none;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .btn-group button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .card img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+
+
+.fixlyTeam {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Child class commitment and advisory styling */
+.commitment, .advisory-team {
+    flex: 1 1 calc(50% - 40px);
+    
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.fixlyTeam  h2  ,button{
+    margin: 20px;
+    
+}
+.fixlyTeam h2{
+    color: yellowgreen;
+}
+.fixlyTeam li{
+    text-align: center;
+}
+.fixlyTeam span{
+    color: white;
+}
+/* Default button styling */
+button {
+    background-color: yellowgreen;
+    margin: 10px !important;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+}
+
+button:hover {
+    opacity: 0.5;
+    color: black;
+}
+
+/* Responsive design: smaller screens */
+@media (max-width: 768px) {
+    .commitment, .advisory-team {
+        flex: 1 1 100%;
+    }
+}
+
+/* Toggle Read More Content */
+#more, #moredata {
+    display: none;
+}
+
+
+footer{
+    background-color: #010101;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+footer p{
+    padding: 10px;
+    margin: 0;
+    color:white;
+    font-size: 15px;
+
+}
+
+
+
+
+/* Contact Us Container */
+.contact-us-container {
+   
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    background-color: #010101;
+  }
+  
+  .contact-details {
+    width: 45%;
+  }
+  
+  .contact-details h2,
+  .contact-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: greenyellow;
+  }
+  
+  .contact-details p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #6f6d6d;
+  }
+  
+  .social-media {
+    margin-top: 20px;
+  }
+  
+  .social-media h3 {
+    margin-bottom: 10px;
+  }
+  
+  .social-icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #9aff0e;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    width: 45%;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #e8e4e4;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid greenyellow;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #26ff00;
+  }
+  
+  button[type="submit"] {
+    padding: 12px 20px;
+    background-color: greenyellow;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    opacity: 0.7;
+    
+  }
+  
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .contact-us-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .contact-details,
+    .contact-form {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .footer {
+      font-size: 0.9rem;
+    }
+    .updated-abt{
+        flex-direction: column;
+    }
+    .card-upda{
+        max-width: 400px !important;
+        min-width: 300px;
+        margin-top: 20px;
+    }
+    .social-media{
+        margin-bottom: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-details h2,
+    .contact-form h2 {
+      font-size: 1.5rem;
+    }
+  
+    .contact-details p {
+      font-size: 0.9rem;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      font-size: 0.9rem;
+    }
+  
+    button[type="submit"] {
+      font-size: 0.9rem;
+      padding: 10px 15px;
+    }
+  }
+  
+
+
+
+  .contact-form  ,.services{
+    animation: scrollReveal ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+}
+
+
+@keyframes scrollReveal {
+    from{
+     opacity: 0.4;
+     transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.lite{
+    opacity: 0.7;
+}
+.updated-abt{
+    margin: 30px auto ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Card Container */
+.card-container-upda {
+    display: flex;
+    gap: 20px;
+}
+
+/* Card Style */
+.card-upda {
+    position: relative;
+    width: 40vw;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-upda:hover {
+    transform: scale(1.05);
+}
+
+/* Background Image */
+.card-image-upda {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4);
+}
+
+.commitments-img-upda {
+    background-image: url('./assets//about-fixly.jpg');
+}
+
+.advisory-img-upda {
+    background-image: url('./assets/about22.webp');
+}
+
+/* Card Text */
+.card-text-upda {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: max-height 0.3s ease;
+}
+
+/* Read More Effect */
+.more-upda {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.card-upda:hover .more-upda {
+    display: block;
+    max-height: 200px;
+}
+
+.dots-upda {
+    display: inline;
+}
+
+.card-upda:hover .dots-upda {
+    display: none;
+}
+
+.board{
+    border: none;
+    background-color: none !important;
+}
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    overflow: auto;
+    backdrop-filter: blur(10px); /* Blur background */
+}
+
+.modal-content {
+    margin: 15% auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    color: #010101;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.image-box {
+    text-align: center;
+    margin: 10px;
+}
+
+.image-box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.close {
+    display: flex;
+    justify-content: right;
+    font-size: 40px;
+    color: rgb(140, 3, 3);
+    cursor: pointer;
+}
+.btn-model{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+/* Responsive Design for Tablets and Mobiles */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin: 30% auto;
+    }
+
+    .image-box img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        margin: 40% auto;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-box img {
+        width: 100px;
+        height: 100px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
