@@ -6,33 +6,35 @@
     <meta name="description" content="Fixly offers innovative IT solutions, digital transformation, web development, and mobile app development to help businesses grow.">
     <meta name="keywords" content="IT Solutions, Digital Transformation, Web Development, Mobile App Development, UI/UX Design, Cloud Technology, Artificial Intelligence Solutions, Software Development, IT Consultancy Services, Outsourcing Services">
     <meta property="og:title" content="Fixly - Innovative IT Solutions">
-    <meta property="og:description" content="Discover IT solutions and services to transform your business.">
+    <meta property="og:description" content="Fixly - Discover IT solutions and services to transform your business.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="shortcut icon" href="./assets/Fixly.png" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Fixly - Innovative IT Solutions</title>
 </head>
 <body>
+ 
     <div class="home-container">
         <div class="menus">
             <nav>
-                <h1>Fixly</h1>
+                <img class="logo" src="./assets/Fixly.png" alt="fixly logo" width="100px">
                 <ul class="items">
-                    <a href="#">
+                    <a href="#" class="rem">
                         <li>Home</li>
                     </a>
-                    <a href="#About">
+                    <a href="#About" class="rem">
                         <li>About</li>
                     </a>
-                    <a href="#Services">
+                    <a href="#Services" class="rem">
                         <li>Services</li>
                     </a>
-                    <a href="#industry">
+                    <a href="#industry" class="rem">
                         <li>Industries</li>
                     </a>
-                    <a href="#contact">
+                    <a href="#contact" class="rem">
                         <li>Contact us</li>
                     </a>
                 </ul>
@@ -43,6 +45,7 @@
                 </div>
             </nav>
         </div>
+      
         <video autoplay loop muted>
             <source src="./assets/background.mp4" type="video/mp4" >
         </video>
@@ -50,7 +53,7 @@
             <h1 id="dynamic">
                 <span>Fixly</span> finds fast fixes for tricky tasks!
             </h1>
-            <p> Innovating Tomorrow, Today</p>
+            <p id="dynamicPara"> Innovating Tomorrow, Today</p>
         </div>
     </div>
 
@@ -66,9 +69,10 @@
        <div class="updated-abt">
         <div class="card-upda">
           <div class="card-image-upda commitments-img-upda"></div>
-          <div class="card-text-upda">
+          <div class="card-text-upda ">
               <h2>Our Commitment</h2>
-              <ul>
+              <br>
+              <ul >
                   <li>Quality and Timely Delivery</li>
                   <li>Transparency</li>
                   <li>Tailored Solutions<span class="dots-upda"></span></li>
@@ -97,14 +101,14 @@
        </div>
      
 <div class=" btn-model">
-  <button id="openModal">Board</button>
+  <button id="openModal">Directors</button>
 </div>
 
 
 <div id="modal" class="modal">
   <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>Our board members</h2>  <br>
+      
       <div class="image-container">
           <div class="image-box">
               <img src="./assets/fixly1.jpg" alt="Image 1">
@@ -334,6 +338,27 @@
             </svg>
             Universities
           </span>
+       
+          <span>
+          <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-gaming">
+            <rect x="3" y="7" width="18" height="10" rx="2" ry="2"></rect>
+            <line x1="8" y1="11" x2="8" y2="11"></line>
+            <line x1="16" y1="11" x2="16" y2="11"></line>
+            <line x1="12" y1="10" x2="12" y2="14"></line>
+            <line x1="10" y1="12" x2="14" y2="12"></line>
+          </svg>
+          Gaming</span>
+          <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-construction">
+            <path d="M21 8l-6 6"></path>
+            <path d="M14 14l-3 3"></path>
+            <rect x="3" y="17" width="18" height="4"></rect>
+            <path d="M8 21v-3"></path>
+            <path d="M16 21v-3"></path>
+            <line x1="12" y1="17" x2="12" y2="17"></line>
+          </svg>
+        Construction</span>
+                    
         </div>
       </div>
       <div id="contact" class="contact-us-container">
@@ -375,10 +400,10 @@
                 
                 <div class="social-media">
                   <h3>Follow Us</h3>
-                  <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                  <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  <!-- <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a> -->
+                  <a href="https://www.linkedin.com/company/fixly-innovation-private-limited/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://www.instagram.com/fixlyinnov" class="social-icon"><i class="fab fa-instagram"></i></a>
                 </div>
               </div>
             
@@ -398,6 +423,16 @@
         menu.addEventListener('click',()=>{
             menuitems.classList.toggle('menushow')
         })
+        
+        for(var i=0;i<5;i++){
+      var mass =  document.getElementsByClassName("rem")[i].addEventListener("click",function(){
+      
+        document.getElementsByTagName("ul")[0].classList.toggle('menushow')
+     
+    });
+  }
+
+
     </script>
      
 </body>
