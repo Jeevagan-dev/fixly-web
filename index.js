@@ -1,4 +1,5 @@
 const dynamicText = document.getElementById('dynamic');
+const dynamicPara = document.getElementById('dynamicPara');
 
 // Array of text options to rotate through
 const textOptions = [
@@ -7,12 +8,23 @@ const textOptions = [
     '<span>Fixly</span> fosters flawless fixes for curious creators!'
 ];
 
+const paraOptions = [
+    'Innovating Tomorrow, Today',
+    'Where Vision Meets Technology.',
+    'Transforming the Ordinary into the Extraordinary.'
+]
+
 let index = 0;
+
+
 
 // Function to update the text every 5 seconds
 function updateText() {
     index = (index + 1) % textOptions.length;  // Loop back to the first option when reaching the end
-    dynamicText.innerHTML = textOptions[index];  // Update the content
+    dynamicText.innerHTML = textOptions[index]; 
+    dynamicPara.innerHTML = paraOptions[index];
+    
+    // Update the content
 }
 
 // Update text every 5 seconds (5000 milliseconds)
